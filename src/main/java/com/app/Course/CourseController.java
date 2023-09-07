@@ -32,7 +32,7 @@ public class CourseController {
     }
 
     @PostMapping
-    public void addCourse (CourseRequest courseRequest){
+    public void addCourse (@RequestBody CourseRequest courseRequest){
         this.courseServices.addCourse(courseRequest);
     }
 
