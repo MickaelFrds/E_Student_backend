@@ -3,10 +3,12 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgres://ec2-18-202-145-226.eu-west-1.compute.amazonaws.com:5432/d24j5o01qrhsaj
-    username: yvguvtbeuycsbh
-    password: 580af9f39a6c726abd4a87179f0c07a2634be78fccb6d742b9c682c90507477a
     driver-class-name: org.postgresql.Driver
+    maxActive: 10
+    maxIdle: 5
+    minIdle: 2
+    initialSize: 5
+    removeAbandoned: true
   jpa:
     hibernate:
       ddl-auto: create-drop
