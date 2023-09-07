@@ -1,6 +1,7 @@
 package com.app.Course;
 
 import com.app.Util.Date.Day;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -8,13 +9,11 @@ import java.util.Objects;
 import java.util.stream.Stream;
 
 @Service
+@RequiredArgsConstructor
 public class CourseService {
 
     private final CourseRepository courseRepository;
 
-    public CourseService(CourseRepository courseRepository) {
-        this.courseRepository = courseRepository;
-    }
 
     public List<Course> getCourses(){
         return this.courseRepository.findAll();
@@ -47,10 +46,6 @@ public class CourseService {
         stream = stream.filter(course -> Objects.equals(course.getTeacher().getId(), teacherId));
         return stream.toList();
     }
-
-
-
-
 
     public void addCourse(CourseRequest courseRequest) {
         var course = Course.builder()
