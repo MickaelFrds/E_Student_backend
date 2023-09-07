@@ -12,7 +12,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CourseController {
 
-    private CourseService courseServices;
+    private final CourseService courseServices;
 
 
     @GetMapping
