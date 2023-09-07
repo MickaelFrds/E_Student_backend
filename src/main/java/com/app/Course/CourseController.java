@@ -21,7 +21,7 @@ public class CourseController {
     }
 
     @GetMapping("/teacher/{id}")
-    public List<Course> getCoursesByTeacherId(@PathVariable Integer teacherId){
+    public List<Course> getCoursesByTeacherId(@PathVariable(name = "id") Integer teacherId){
         return courseServices.getCoursesByTeacherId(teacherId);
     }
 
