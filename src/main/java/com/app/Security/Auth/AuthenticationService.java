@@ -2,9 +2,9 @@ package com.app.Security.Auth;
 
 
 import com.app.Security.Config.JwtService;
-import com.app.Security.User.Role;
-import com.app.Security.User.User;
-import com.app.Security.User.UserRepository;
+import com.app.User.Role;
+import com.app.User.User;
+import com.app.User.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

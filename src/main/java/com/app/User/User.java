@@ -1,4 +1,4 @@
-package com.app.Security.User;
+package com.app.User;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

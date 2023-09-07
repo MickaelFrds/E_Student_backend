@@ -2,7 +2,7 @@ package com.app.Course;
 
 
 import com.app.Student.Student;
-import com.app.Teacher.Teacher;
+import com.app.User.User;
 import com.app.Util.Date.Day;
 import com.app.Util.Date.Hours;
 import jakarta.persistence.*;
@@ -38,6 +38,6 @@ public class Course {
     private List<Student> students;
 
     @OneToOne
-    private Teacher teacher;
+    private User teacher;
 
 }
