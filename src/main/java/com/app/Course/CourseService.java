@@ -48,7 +48,7 @@ public class CourseService {
     }
 
     public void addCourse(CourseRequest courseRequest) {
-        var course = Course.builder()
+        Course course = Course.builder()
                 .title(courseRequest.title())
                 .teacher(courseRequest.teacher())
                 .students(courseRequest.students())
