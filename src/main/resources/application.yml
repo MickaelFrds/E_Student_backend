@@ -18,4 +18,4 @@ spring:
         format_sql: true
     show-sql: true
   main:
-    web-application-type: servlet
+    web-application-type: NONE
