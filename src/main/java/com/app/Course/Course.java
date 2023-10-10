@@ -3,8 +3,6 @@ package com.app.Course;
 
 import com.app.Student.Student;
 import com.app.User.User;
-import com.app.Util.Date.Day;
-import com.app.Util.Date.Hours;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -23,20 +21,10 @@ public class Course {
     @Id
     @GeneratedValue
     private Integer id;
-
     private String title;
-
-    @Enumerated(EnumType.STRING)
-    private Day day;
-
-    @Enumerated(EnumType.STRING)
-    private Hours startTime;
-
-    private Hours endTime;
-
-    @OneToMany
+    @OneToMany(orphanRemoval=true)
+    @JoinColumn(name="id")
     private List<Student> students;
-
     @OneToOne
     private User teacher;
 

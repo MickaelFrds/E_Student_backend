@@ -19,7 +19,7 @@ public class AttendanceController {
     }
 
     @GetMapping("/{id}")
-    public Attendance getAttendancebyId(@PathVariable Integer id){
+    public Attendance getAttendanceById(@PathVariable(name = "id") Integer id){
         return this.attendanceService.getAttendanceById(id);
     }
 

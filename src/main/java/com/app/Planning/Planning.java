@@ -1,33 +1,30 @@
-package com.app.Attendance;
+package com.app.Planning;
 
-import com.app.Student.Student;
+
+import com.app.TimeSlot.TimeSlot;
+import com.app.User.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import java.util.List;
 
-import java.time.LocalDateTime;
 
 @Data
+@Entity
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-public class Attendance {
+public class Planning {
 
     @Id
     @GeneratedValue
     private Integer id;
-
-    private LocalDateTime date;
-
-    @Enumerated(EnumType.STRING)
-    private AttendanceStatus status;
-
     @OneToOne
     @JoinColumn(name = "id")
-    private Student student;
-
+    private User teacher;
+    @OneToMany
+    private List<TimeSlot> timeSlots;
 
 }
