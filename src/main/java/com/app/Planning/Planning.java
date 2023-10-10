@@ -22,7 +22,6 @@ public class Planning {
     @GeneratedValue
     private Integer id;
     @OneToOne
-    @JoinColumn(name = "id")
     private User teacher;
     @OneToMany
     private List<TimeSlot> timeSlots;

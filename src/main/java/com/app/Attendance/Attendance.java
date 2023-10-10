@@ -19,14 +19,10 @@ public class Attendance {
     @Id
     @GeneratedValue
     private Integer id;
-
     private LocalDateTime date;
-
     @Enumerated(EnumType.STRING)
     private AttendanceStatus status;
-
     @OneToOne
-    @JoinColumn(name = "id")
     private Student student;
 
 

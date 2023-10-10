@@ -21,7 +21,6 @@ public class TimeSlot {
     @GeneratedValue
     private Integer id;
     @ManyToOne
-    @JoinColumn(name = "id")
     private Course course;
     @Enumerated(EnumType.STRING)
     private DayOfWeek day;

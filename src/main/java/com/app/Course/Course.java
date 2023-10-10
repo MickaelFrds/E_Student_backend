@@ -23,7 +23,6 @@ public class Course {
     private Integer id;
     private String title;
     @OneToMany(orphanRemoval=true)
-    @JoinColumn(name="id")
     private List<Student> students;
     @OneToOne
     private User teacher;
