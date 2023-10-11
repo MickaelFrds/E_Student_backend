@@ -22,9 +22,10 @@ public class Course {
     @GeneratedValue
     private Integer id;
     private String title;
-    @OneToMany(orphanRemoval=true)
+    @ManyToMany
     private List<Student> students;
-    @OneToOne
+    @ManyToOne
     private User teacher;
-
+    @Enumerated(EnumType.STRING)
+    private Level level;
 }

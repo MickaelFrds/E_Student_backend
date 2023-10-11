@@ -26,5 +26,6 @@ public class TimeSlot {
     private DayOfWeek day;
     private LocalTime startTime;
     private LocalTime  endTime;
+    private String location;
 
 }

@@ -3,6 +3,12 @@ package com.app.Student;
 public record StudentRequest(
         String firstName,
         String lastName,
-        Integer age
+        String birthDay,
+        Integer age,
+        String emailParent,
+        String phoneParent,
+        String observation,
+        String additionalInformation
 ) {
 }
+

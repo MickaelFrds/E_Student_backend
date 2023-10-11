@@ -9,6 +9,7 @@ import java.util.List;
 public record CourseRequest(
         String title,
         List<Student> students,
-        User teacher
+        User teacher,
+        Level level
 ) {
 }

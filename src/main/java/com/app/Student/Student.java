@@ -18,6 +18,11 @@ public class Student {
     private Integer id;
     private String firstName;
     private String lastName;
+    private String birthDay;
     private Integer age;
+    private String emailParent;
+    private String phoneParent;
+    private String observation;
+    private String additionalInformation;
 
 }
